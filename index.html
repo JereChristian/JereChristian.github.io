@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivasi Harian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">💪 Semangat, Kamu Pasti Bisa!</h1>
+        <p class="quote">"Kegagalan hanyalah kesuksesan yang tertunda. Terus berjuang, langkah kecil tetaplah maju."</p>
+        <button class="motivate-button">Berikan Semangat Lagi</button>
+    </div>
+
+    <script>
+        const button = document.querySelector('.motivate-button');
+        const quotes = [
+            "Badai pasti berlalu, dan kamu akan jadi lebih kuat!",
+            "Setiap hari adalah kesempatan baru untuk sukses!",
+            "Tidak ada usaha yang sia-sia, terus maju!",
+            "Jangan berhenti saat lelah, berhenti saat selesai!",
+            "Kamu lebih tangguh dari yang kamu kira!"
+        ];
+
+        button.addEventListener('click', () => {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.querySelector('.quote').textContent = `"${randomQuote}"`;
+        });
+    </script>
+</body>
+</html>
